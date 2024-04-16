@@ -1,0 +1,26 @@
+[project]
+name = "nt2-config"
+version = "0.1"
+description = "Standalone module for reading nt2 config files"
+readme = "README.md"
+authors = [{name = "Brian M. Dennis"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "click"
+]
+
+[project.urls]
+Homepage = "https://github.com/bmdaperio/nt2-config"
+Changelog = "https://github.com/bmdaperio/nt2-config/releases"
+Issues = "https://github.com/bmdaperio/nt2-config/issues"
+CI = "https://github.com/bmdaperio/nt2-config/actions"
+
+[project.entry-points.console_scripts]
+nt2-config = "nt2_config.cli:cli"
+
+[project.optional-dependencies]
+test = ["pytest"]
