@@ -1,6 +1,8 @@
 from click.testing import CliRunner
 from nt2_config.cli import cli
 
+from nt2_config import config
+
 
 def test_version():
     runner = CliRunner()
@@ -8,3 +10,7 @@ def test_version():
         result = runner.invoke(cli, ["--version"])
         assert result.exit_code == 0
         assert result.output.startswith("cli, version ")
+
+
+def test_config():
+    config.load_config()
