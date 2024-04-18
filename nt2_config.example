@@ -1,0 +1,16 @@
+dvr:
+  name: !ENV DVR_REPO_NAME
+  url: !ENV DVR_URL
+  path: !ENV DVR_PATH
+  remotes:
+    git: "dvregistry-local"
+    git_branch: "origin/main"
+    data: !ENV DVR_REMOTE_NAME
+
+dagster:
+  postgres:
+    db: !ENV DAGSTER_POSTGRES_DB
+    user: !ENV DAGSTER_POSTGRES_USER
+    password: !SECRET DAGSTER_POSTGRES_PASSWORD
+    
+

@@ -1,0 +1,5 @@
+DVR_PATH=/Users/example/datasets/nt2_dataset
+DVR_REPO_PATH=/Users/example/datasets/nt2_dataset
+DVR_DIR="/Users/example/Library/Application Support/com.aperioglobal.nt2/"
+DVR_REMOTE_NAME=dvregistry-local
+DVR_REPO_NAME="nt2-dataset"
