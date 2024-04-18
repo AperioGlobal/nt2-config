@@ -31,7 +31,16 @@ Rename and edit the example yaml config and .env files.
 	$ ${VISUAL:-${EDITOR:-vi}} .env.nt2
 	$ mv env_nt2_secrets.example .env.nt2_secrets
 	$ ${VISUAL:-${EDITOR:-vi}} .env.nt2_secrets
-	$ nt2-config
+	$ nt2-config -f nt2_config.example -e env_nt2.example -s env_nt2_secrets.example config
+	{'dvr': {'name': EnvVar(DVR_REPO_NAME -> nt2-dataset),
+         'url': EnvVar(DVR_URL -> ),
+         'path': EnvVar(DVR_PATH -> /Users/example/datasets/nt2_dataset),
+         'remotes': {'git': 'dvregistry-local',
+                     'git_branch': 'origin/main',
+                     'data': EnvVar(DVR_REMOTE_NAME -> dvregistry-local)}},
+      'dagster': {'postgres': {'db': EnvVar(DAGSTER_POSTGRES_DB -> some_db),
+                               'user': EnvVar(DAGSTER_POSTGRES_USER -> some_user),
+                               'password': SecretVar(DAGSTER_POSTGRES_PASSWORD -> ***** )}}}
 
 ## Development
 
