@@ -13,5 +13,5 @@ def test_version():
 
 
 def test_config():
-    config.load_environment_variables()
+    config.load_environment_values()
     config_loader = config.config_loader()
